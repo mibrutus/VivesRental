@@ -11,7 +11,8 @@
         <StackPanel>
 	        <TextBlock>Home View</TextBlock>  
             <Button Content="Navigate to new Verhuur Informatie" Command="{Binding NavigateToVerhuurInformatieCommand}"></Button>
+			
         </StackPanel>
-		 
-    </Grid>
+		
+	</Grid>
 </UserControl>

@@ -1,19 +1,20 @@
 ﻿using VivesRental.Core;
 using VivesRental.Navigation;
 using VivesRental.Services;
+using VivesRental.Services.Contracts;
 
 namespace VivesRental.ViewModels
 {
 	public class HomeViewModel : ObservableObject, INavigatableViewModel
 	{
-		private readonly IDummyService _dummyService;
+		private readonly IProductService _productService;
 		private readonly INavigator _navigator;
 
 		public RelayCommand NavigateToVerhuurInformatieCommand { get; private set; }
 
-		public HomeViewModel(IDummyService dummyService, INavigator navigator)
+		public HomeViewModel(IProductService productService , INavigator navigator)
 		{
-		    _dummyService = dummyService;
+		    _productService = productService;
 			_navigator = navigator;
 
 			InstantiateCommands();
